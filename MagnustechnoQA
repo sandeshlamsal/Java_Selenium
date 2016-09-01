@@ -53,7 +53,7 @@ contains
 testcase_ID   Descrption   Steps   Precondition     TestData   Expected   Actual      Result
 
 
-JAVA
+JAVA BASICS
 -----
 download jdk, eclipse
 
@@ -62,4 +62,8 @@ download jdk, eclipse
 3. functions,static, final,switch, if , else, loops
 4. object, class (OOD concepts),Abstract, inheritance, polymorphism(overloading, overiding)
 5. Threads
-6.collections (arraylist,set)
+6.collections (arraylist, LinkedList, set,iterator), HashMap, HashTable
+
+TestNG
+------
+
