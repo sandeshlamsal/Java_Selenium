@@ -23,7 +23,9 @@ SDLC
 3. Design (LOW and HIGH) // tech architech Technical DOC 
 login // modules interact or may not interact to each other to make a functionality of sytem.
 signup  //
-4. Testing (dev,tester,user all participate) 
-dev= unit testing to own code to see works as per expected, 
-tester= feature testing, integration testing(module,db,log)
+4. Development
+5. Testing (dev,tester,user all participate) 
+dev= unit testing to own code to see works as per expected, end to end testing.
+tester= feature testing, integration testing(module,db,log), System Testing (live mode)
 user= user acceptancce testing
+6.Maintenance (bug fix, upgrades)
