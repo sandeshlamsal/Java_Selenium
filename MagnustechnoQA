@@ -41,3 +41,25 @@ sprint backlog= left from previous sprint goes here (doc)
 scrum master= role of master for cordination for team mgnt(role)
 daily standup meeting (13 min to 30 min) to talk about blockers and their solutions (meeting)
 restropective meeting ( what is good, what went wrong, what we could do for better) (meeting)
+
+
+TEST CASE
+----------
+not to miss every cases for a functino we write test case.
+
+used test mgnt tools (ALM) or excel first then upload
+
+contains
+testcase_ID   Descrption   Steps   Precondition     TestData   Expected   Actual      Result
+
+
+JAVA
+-----
+download jdk, eclipse
+
+1. hello world to show env.
+2. variables,errors, debugging
+3. functions,static, final,switch, if , else, loops
+4. object, class (OOD concepts),Abstract, inheritance, polymorphism(overloading, overiding)
+5. Threads
+6.collections (arraylist,set)
