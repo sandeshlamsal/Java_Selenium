@@ -64,6 +64,10 @@ download jdk, eclipse
 5. Threads
 6.collections (arraylist, LinkedList, set,iterator), HashMap, HashTable
 
-TestNG
+TestNG(needs jdk 5 or higher)  open source automated testing framework
 ------
+next generation of junit, not tests unit or  a function  but tests unit,integration,end to end testing
+
+
+
 
