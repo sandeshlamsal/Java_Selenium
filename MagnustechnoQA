@@ -1,0 +1,29 @@
+Tester Role
+----------
+Tests application according to the requirement of the system.
+-It can be verifying  the FRD doc from BA
+-Making test artificacts (test strategy, test plan, test cases, bug reports)
+-create test environment to check every new/changed build from developers, for it pull the prod to test env
+
+service based company(wipro,tcs) work for product based company(microsoft,google)
+
+project
+-------
+To address the business issues or business oppourtunity rounds of official and un-official meetings
+among the business people (C level, Business Analyst). Once it looks feasible project initiation Document (PID) is created
+to look overall project details by BA. 
+
+Then PM is hired or selected  to plan for resources/times lines for the project. Then he will prepare Porject plan document
+where very detail about the project resources are described. (time,team,risk,mitigation,cost)
+
+SDLC
+---
+1. initiation (project initiation) // PID doc by BA
+2. Requirement (user(URS doc and software (SRS doc)) //srs is base for dev and tester prepared by BA
+3. Design (LOW and HIGH) // tech architech Technical DOC 
+login // modules interact or may not interact to each other to make a functionality of sytem.
+signup  //
+4. Testing (dev,tester,user all participate) 
+dev= unit testing to own code to see works as per expected, 
+tester= feature testing, integration testing(module,db,log)
+user= user acceptancce testing
