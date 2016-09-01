@@ -29,3 +29,15 @@ dev= unit testing to own code to see works as per expected, end to end testing.
 tester= feature testing, integration testing(module,db,log), System Testing (live mode)
 user= user acceptancce testing
 6.Maintenance (bug fix, upgrades)
+
+Developement Metodologies
+---------------------------
+1. Water fall 
+2. Agile (incremental and iterative model)
+sprint time =time to realase product to market (should not be more then 2 to 4 weeks)
+product backlog= holds all requirements(doc)
+sprint backlog= left from previous sprint goes here (doc)
+
+scrum master= role of master for cordination for team mgnt(role)
+daily standup meeting (13 min to 30 min) to talk about blockers and their solutions (meeting)
+restropective meeting ( what is good, what went wrong, what we could do for better) (meeting)
