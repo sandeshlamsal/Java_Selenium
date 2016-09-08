@@ -66,7 +66,49 @@ download jdk, eclipse
 
 TestNG(needs jdk 5 or higher)  open source automated testing framework
 ------
-next generation of junit, not tests unit or  a function  but tests unit,integration,end to end testing
+TestNG developed in java
+@annotation based
+does not required main method
+next generation of junit, not only tests unit or  a function  but tests unit,integration,end to end testing
+Mulithreading testing can be done
+
+Installing TestNG
+----------------
+help->marketplace->type TestNG and install
+
+simple code
+import org.testng.annotations.Test;
+public class testNGBasic {
+@Test
+public void test(){
+	System.out.println("test is started");	
+}
+}
+
+xml is the base for testNG, default creation is 
+suite is a group of test in multiple class
+A single test can contain multiple classes
+eg: 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+  <test verbose="2" name="Default test">
+    <classes>
+      <class name="san.com.testNGBasic"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
+
+
+The default location of the above file can be copied to any project folder and run with testNG to view the
+reports in eclipse editor. similarly we can add multiple classes inside <classes>.
+
+TO view the report run the xml file and refresh the project to see a new folder created test_output where you
+can run the .html file to see the result generated.
+
+Fail report for test is generated in diff files which can be runned to check only failed section.
+
+
 
 
 
