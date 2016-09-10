@@ -108,6 +108,29 @@ can run the .html file to see the result generated.
 
 Fail report for test is generated in diff files which can be runned to check only failed section.
 
+Steps of Execution
+------------------
+first execute class as testNG and then .xml (suite) as testNG to see the changes
+
+Basic Annotations for Test
+-------------------------
+@Test  //to define a normal test case
+
+@BeforeSuite 
+@AfterSuite
+
+@BeforeTest
+@AfterTest
+
+@BeforeClass
+@AfterClass
+
+@BeforeMethod   //for each method this is executed
+@AfterMethod    //for each method this is executed
+
+
+
+
 
 
 
