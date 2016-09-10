@@ -1,3 +1,5 @@
+TESTING,JAVA, TESTNG, SELENIUM all in one
+
 Tester Role
 ----------
 Tests application according to the requirement of the system.
@@ -128,12 +130,136 @@ Basic Annotations for Test
 @BeforeMethod   //for each method this is executed
 @AfterMethod    //for each method this is executed
 
+Disable the test method execution with enabled properties
+@Test(enabled=false)
+
+how to just execute one single oneMethod() ??
+--------------
+Ans: With using <methods> tag and <include> tage in testSuite xml file
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test">
+  <test verbose="2" name="test function">
+    <classes>
+      <class name="san.com.testNGBasic"/>
+      <methods>
+      <include name="justexecuteMethod"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
 
 
+Assertion
+---------
+failure= expected value differ the actual value, diff in requirements
+
+Assertion is passed  the test case if requirement or condition is pass
+Assertion is failed the test case if requirement or condition is fail.
+
+handled by Assert class
+
+TYPES(HARD AND SOFT)
+------------------
+HardAssertion will stop the execution flow
+assertTue()
+assertFalse()
+eg: 
+int a=20;
+Assert.assertTrue(a==30)   //failed
+// will fail in report as a not equal to 20, only pass i a=30
+//means assertTrue is a static method, so it can be direclty accessed.
+
+Assert.assertFalse(a==30) // passed as, a==30 is true
+
+SoftAssertion will continue the execution flow
+SoftAssert sa=new SoftAssert();
+sa.assertTrue(a==30);
+
+GROUPS
+-----
+arranging the common methods(units) as a gingle group using groups properties
+defines when to check the methods in testing like sanity,regression,feature
+
+eg:
+@Test(groups={"sanity","regression"})
+public void calcInt(){
+}
+
+@Test(groups={"regression"})
+public void calcTime(){
+}
+
+control of groups can be made through XML file, add it in test level not in class level
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test">
+  <test verbose="2" name="test function">
+  <groups>
+  <run>
+  <include name="regression"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="san.com.testNGBasic"/>
+      </class>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
+
+Creating dependecny in between tests, using dependsOnMethods properties
+--------------------------
+eg: if signup is failed dont go for login
+@Test
+public void signup(){
+}
+
+@Test(dependsOnMethods="signup")
+public void login(){
+}
 
 
+Passing Parameters 
+----------------
+1st method
+
+through xml <parameter> and then @Parameter  at suite level
+
+?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+<parameter name="paramName" value="Sandesh"></parameter>
+  <test verbose="2" name="Default test">
+    <classes>
+      <class name="san.com.testNGBasic"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
+
+Now, use the paramName to class
+
+@Test
+@Parameters(value="paramName)
+
+2nd Method using DataProvider (passing set of multiple values) for DDT (data driven testing)
+
+@DataProvider
+public Object[][]  provideData(){
+retrun new Object[][]{
+{1,5},
+{4,6}
+{7,9}
+};
+}
+@Test(dataProvider="provideData")
+publiv void add(int a, int b){
+out.println(a+b);
+}
+// the add method will be executeed 3 times with diff parameter values,this can be done after reading it from excel too
 
 
-
-
-
+SELENIUM
+........
