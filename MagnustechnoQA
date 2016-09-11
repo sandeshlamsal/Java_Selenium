@@ -260,6 +260,7 @@ out.println(a+b);
 }
 // the add method will be executeed 3 times with diff parameter values,this can be done after reading it from excel too
 
+TestNG report, ExtentReport are example of other Reporting api used in TestNG.
 
 SELENIUM
 ........
@@ -276,4 +277,13 @@ Selenium WebDriver
 ie explorer or other browser are 3rd party browsers whose
 implementation for WebDriver interface is defined using selenium.
 so selenium webDriver is an api to handle automation through web browsers.
+
+jar required for selenium
+------
+selenium-server-standalone jar
+and add it to buid path
+
+test the code
+------------
+
 
