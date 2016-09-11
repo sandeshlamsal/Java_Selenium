@@ -263,3 +263,9 @@ out.println(a+b);
 
 SELENIUM
 ........
+types
+1. Selenium IDE //record and play, can create test suite, test, breakpoints, can import the generated codes to java ide
+file->export choose your language to import
+2. RC // old tech, based on client-server, internally works with jscript
+3. WebDriver // works directly with native browser codes to all to all web browsers
+4. Grid
