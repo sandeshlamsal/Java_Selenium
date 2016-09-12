@@ -285,5 +285,20 @@ and add it to buid path
 
 test the code
 ------------
+package san.com;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+public class seleniumTest {
+	WebDriver driver;
+	public seleniumTest(){
+		driver=new FirefoxDriver();	
+	}
+	@Test
+	public void openBrowwer(){
+	
+	}
+}
 
+Above code is running selenium 2.53, and opens the firefox browser
 
