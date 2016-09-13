@@ -285,6 +285,8 @@ and add it to buid path
 
 test the code
 ------------
+for the compatibility seleniuem 
+
 package san.com;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -296,9 +298,28 @@ public class seleniumTest {
 	}
 	@Test
 	public void openBrowwer(){
-	
+	driver.get("http://www.google.com");
+	driver.close();//close the browser
 	}
 }
 
 Above code is running selenium 2.53, and opens the firefox browser
+
+Firebug
+-------
+download firebug plug-in for mozilla to know the components id,css for automation
+open firefox and go to add-ons->firebug->download
+
+8 types of Elements locator in web-pages
+--------------------------
+Element component of web-pages (text,textbox,link,checkbox etc.)
+
+1.ByClassName
+2.ByCssSelector
+3.ById
+4.ByLinkText
+5.ByName
+6.ByPartialLinkText
+7.ByTagName
+8.ByXpath  //install ad-on firepath on firefox and get the path for each element
 
