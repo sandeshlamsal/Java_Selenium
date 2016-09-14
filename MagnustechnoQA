@@ -322,4 +322,39 @@ Element component of web-pages (text,textbox,link,checkbox etc.)
 6.ByPartialLinkText
 7.ByTagName
 8.ByXpath  //install ad-on firepath on firefox and get the path for each element
-
+ 2 types of xpath absolute(starts from root) and relative (sarts from .)
+ 
+ 
+ Gmail login-example 
+ --------------------
+ package san.com;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+public class seleniumTest {
+	WebDriver driver;
+	public seleniumTest(){
+		driver=new FirefoxDriver();	//opens the browser
+		//driver=new ChromeDriver();
+			}
+	@Test
+	    public void openBrowser() throws InterruptedException{	//loads url in the browser
+		driver.manage().deleteAllCookies();
+		driver.get("http://www.gmail.com");
+		//WebElement txtEmail=driver.findElement(By.id("Email")); //get element by id
+		//WebElement txtEmail=driver.findElement(By.name("Email")); //get element by name
+		//WebElement txtEmail=driver.findElement(By.cssSelector("input[id='Email']")); //get element by tag and id
+		WebElement txtEmail=driver.findElement(By.xpath(".//*[@id='Email']"));	//get element by xpath
+		txtEmail.sendKeys("sunwalsandesh@gmail.com");//insert value to text box
+		driver.findElement(By.xpath(".//*[@id='next']")).click(); //click the next button
+		Thread.sleep(900); //since another page is loaded, some loading time is required to handle
+		WebElement txtPassword=driver.findElement(By.xpath(".//*[@id='Passwd']"));
+		txtPassword.sendKeys("sandeshc");
+		driver.findElement(By.xpath(".//*[@id='signIn']")).click(); //clicks the signin
+		Thread.sleep(1000); //since another page is loaded, some loading time is required to handle
+		driver.close();//close the browser
+	}
+}
